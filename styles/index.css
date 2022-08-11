@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, #e66465, #9198e5);
+    background-repeat:no-repeat;
+}
+
+#container{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#left_menu{
+    width:25vw;
+    height: 50vw;
+}
+
+#right_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:25vw;
+    height: 90vh;
+
+}
+
+#sudoku_grid{
+    width: 45vw;
+    height: 75vh;
+    background: rgb(236, 232, 232);
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    box-sizing: border-box;
+}
+
+.btn{
+    margin: 1rem;
+    padding:0px;
+    width: 10vw;
+    height: 8vw;
+    font-size: 1rem;
+}
+
+.on{
+    background-color: #00ffa0;
+}
+
+.off{
+    background-color: none;
+}
+
+.box {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.cell{
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.initial_given_cell{
+    color: #ad2a1a;
+}
+
+.solved_cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.guess_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unsolved_cell{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    color: #093145;
+}
+
+.cell:hover{
+    cursor: pointer;
+    background-color: #91c5e4;
+}
+
+.active{
+    background-color:#91c5e4;
+}
+
+@media(max-width: 730px){
+    #container{
+        flex-direction: column;
+    }
+}
